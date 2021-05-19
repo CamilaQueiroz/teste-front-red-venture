@@ -1,0 +1,74 @@
+@mixin favorite-staff-label($padding, $fontSize) {
+  .favorite {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    padding: $padding;
+    background: var(--green-50);
+    color: var(--white);
+    font-weight: 700;
+    font-size: $fontSize;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+}
+
+@mixin first-child-item-list {
+  li:first-child {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    position: relative;
+
+    @include favorite-staff-label($padding: 0.5rem 1.5rem, $fontSize: 1rem);
+
+    div.card-plant {
+      .card-plant-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: row;
+
+        .card-plant-title {
+          max-width: 50%;
+          h3 {
+            font-size: 2.1875rem;
+            color: var(--green-200);
+          }
+        }
+
+        .card-plant-info {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          justify-content: space-between;
+
+          span {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--green-200);
+            display: block;
+            padding: 0.8rem 0;
+          }
+
+          .card-plant-icons {
+            display: flex;
+            gap: 10px;
+            img {
+              height: 25px;
+            }
+          }
+        }
+      }
+
+      picture {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          height: 350px;
+        }
+      }
+    }
+  }
+}

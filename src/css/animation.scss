@@ -1,0 +1,17 @@
+.arrow-down {
+  animation: arrow-down 2s infinite;
+}
+
+@keyframes arrow-down {
+  0% {
+    transform: translateY(20px);
+  }
+
+  70% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(20px);
+  }
+}

@@ -1,0 +1,81 @@
+@media (max-width: $x-small) {
+  section.search-of-best-plant,
+  section.no-results-found {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section.no-results-found img {
+    margin-top: 2rem;
+  }
+
+  section.picks-for-you ol {
+    display: flex;
+    overflow-x: scroll;
+
+    li picture img {
+      height: 220px !important;
+    }
+    li:first-child picture img {
+      height: 220px !important;
+    }
+  }
+
+  section.hero div.desktop-images {
+    display: none;
+    img {
+      max-height: 170px;
+    }
+  }
+}
+
+@media (min-width: $small) {
+  section.hero div.mobile-images {
+    display: none;
+  }
+}
+
+@media (min-width: $small) and (max-width: 899px) {
+  section.hero div.desktop-images {
+    img {
+      max-height: 370px;
+    }
+  }
+
+  .hero-infos {
+    padding: 0;
+    justify-content: center;
+
+    h1 {
+      margin-top: 0;
+    }
+  }
+}
+
+@media (min-width: $medium) and (max-width: 999px) {
+  section.hero div.desktop-images {
+    img {
+      max-height: 410px;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  section.hero {
+    .hero-infos {
+      max-width: 1000px;
+      margin-left: -500px;
+      left: 50%;
+      justify-content: center;
+      h1 {
+        font-size: 4.375rem;
+      }
+    }
+  }
+}
+
+@media (min-width: $x-large) {
+  div.desktop-images img {
+    max-height: 630px !important;
+  }
+}

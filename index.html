@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Front End Test - Greenthumb</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/css/index.scss" />
+  </head>
+
+  <body>
+    <main>
+      <section class="hero">
+        <div class="desktop-images">
+          <img src="./images/hero/desktop/left-leaves.png" alt="Leaves" />
+          <img
+            src="./images/hero/desktop/plantperson.png"
+            class="middle-hero-image"
+            alt="Plant person"
+          />
+          <img src="./images/hero/desktop/right-leaves.png" alt="Leaves" />
+        </div>
+        <div class="mobile-images">
+          <img src="./images//hero/mobile/mobile-leaves.png" alt="Leaves" />
+          <img
+            src="./images//hero/mobile/mobile-plantperson.png"
+            alt="Plant person"
+          />
+        </div>
+
+        <div class="hero-infos">
+          <img src="./images/icons/logo-white.svg" alt="green thumb" />
+          <h1>Find your next green friend</h1>
+          <img
+            src="./images/icons/arrow-down.svg"
+            class="arrow-down"
+            alt="arrow down"
+          />
+        </div>
+      </section>
+
+      <section class="container search-of-best-plant">
+        <div class="card-choose">
+          <img src="./images/illustrations/sun.png" alt="sun" />
+          <span>
+            <strong>1.</strong> Set the amount of <strong>sunlight</strong> your
+            plant will get
+          </span>
+          <div class="select-container">
+            <div id="amountOfSunlight" class="selected">Select...</div>
+            <div class="options-container">
+              <div class="option">
+                <input
+                  type="radio"
+                  class="radio-input"
+                  name="amountOfSunlight"
+                  value="no"
+                  id="noSunlight"
+                />
+                <label for="noSunlight">No sunlight</label>
+              </div>
+              <div class="option">
+                <input
+                  type="radio"
+                  class="radio-input"
+                  name="amountOfSunlight"
+                  value="low"
+                  id="lowSunlight"
+                />
+                <label for="lowSunlight">Low sunlight</label>
+              </div>
+              <div class="option">
+                <input
+                  type="radio"
+                  class="radio-input"
+                  name="amountOfSunlight"
+                  value="high"
+                  id="highSunlight"
+                />
+                <label for="highSunlight">High sunlight</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-choose">
+          <img src="./images/illustrations/wateringcan.png" alt="wateringcan" />
+          <span>
+            <strong>2.</strong> How often do you want to
+            <strong>water</strong> your plant?
+          </span>
+
+          <div class="select-container">
+            <div id="howOftenForTheWater" class="selected">Select...</div>
+            <div class="options-container">
+              <div class="option">
+                <input
+                  type="radio"
+                  class="radio-input"
+                  name="howOftenForTheWater"
+                  value="rarely"
+                  id="rarely"
+                />
+                <label for="rarely">Rarely</label>
+              </div>
+              <div class="option">
+                <input
+                  type="radio"
+                  class="radio-input"
+                  name="howOftenForTheWater"
+                  value="regularly"
+                  id="regularly"
+                />
+                <label for="regularly">Regularly</label>
+              </div>
+              <div class="option">
+                <input
+                  type="radio"
+                  class="radio-input"
+                  name="howOftenForTheWater"
+                  value="daily"
+                  id="daily"
+                />
+                <label for="daily">Daily</label>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+        <div class="card-choose">
+          <img src="./images/illustrations/dog.png" alt="dog" />
+          <span>
+            <strong>3.</strong> Do you have pets? Do they
+            <strong>chew</strong> plants?
+          </span>
+
+          <div class="select-container">
+            <div id="petsChewThePlants" class="selected">Select...</div>
+            <div class="options-container">
+              <div class="option">
+                <input
+                  type="radio"
+                  class="radio-input"
+                  name="petsChewThePlants"
+                  value="false"
+                  id="false"
+                />
+                <label for="false">No/They don't care</label>
+              </div>
+              <div class="option">
+                <input
+                  type="radio"
+                  class="radio-input"
+                  name="petsChewThePlants"
+                  value="true"
+                  id="true"
+                />
+                <label for="true">Yes</label>
+              </div>
+              
+              
+            </div>
+          </div>
+      </section>
+
+      <div class="light-gray-background" id="no-results-found">
+        <section class="container no-results-found">
+          <div>
+            <h3>No results yet...</h3>
+            <p>
+              Use the filters above to find the plant that best fits your
+              environment :)
+            </p>
+          </div>
+          <img
+            src="./images/illustrations/no-results.png"
+            alt="No results found"
+          />
+        </section>
+      </div>
+
+      <div class="light-gray-background" id="results">
+        <section class="container picks-for-you">
+          <header>
+            <img src="./images/illustrations/pick.png" alt="Picks for you" />
+            <h2>Our picks for you</h2>
+          </header>
+
+          <ol id="mainList"></ol>
+        </section>
+
+        <section class="back-to-top">
+          <div class="container">
+            <button type="button" class="button-transparent button-full-width">
+              <img src="./images/icons/arrow-up.svg" alt="back to top" /> back
+              to the top
+            </button>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="./src/js/index.js"></script>
+    <script src="./src/js/buttonScrollToTop.js"></script>
+    <script src="./src/js/addAndRemoveActiveClassOfSelectBox.js"></script>
+    <script src="./src/js/changeTitlesOnSelectBox.js"></script>
+  </body>
+</html>
